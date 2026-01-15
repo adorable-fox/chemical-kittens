@@ -1,0 +1,34 @@
+# Tasks
+
+- [ ] Planning
+    - [ ] Create implementation plan <!-- id: 0 -->
+    - [ ] Review with user <!-- id: 1 -->
+- [ ] Implementation
+    - [x] Initialize Astro project (minimal template) <!-- id: 2 -->
+    - [x] Configure Content Collections for Recipes <!-- id: 3 -->
+    - [x] Create Layout and Base Styles <!-- id: 4 -->
+    - [x] Implement Home Page (Recipe Listing) <!-- id: 5 -->
+    - [x] Implement Recipe Detail Page ([slug].astro) <!-- id: 6 -->
+    - [x] Update Layout (Title/Subtitle) <!-- id: 12 -->
+    - [x] Add Image support (Content & Styles) <!-- id: 13 -->
+    - [x] Update Container Width (3 columns) <!-- id: 14 -->
+    - [x] Implement Pagination ([...page].astro) <!-- id: 15 -->
+    - [x] Create Search Index (search.json.ts) <!-- id: 16 -->
+    - [x] Refactor Header (Flexbox Layout) <!-- id: 17 -->
+    - [x] Implement Search UI & Logic <!-- id: 18 -->
+    - [x] Implement Dark Mode <!-- id: 33 -->
+    - [x] Implement Cooking Mode (Wake Lock) <!-- id: 34 -->
+    - [x] Switch to Serif Typography <!-- id: 35 -->
+    - [x] Customize Page Titles (Icon + Conditional Logic) <!-- id: 36 -->
+    - [x] Optimize Images (Astro Assets) <!-- id: 37 -->
+    - [x] Add sample recipe markdown files <!-- id: 7 -->
+    - [x] Polish Styling (Minimalistic) <!-- id: 8 -->
+- [x] Verification
+    - [x] Verify build and dev server <!-- id: 9 -->
+    - [x] Verify navigation to markdown pages <!-- id: 10 -->
+    - [x] Verify responsiveness <!-- id: 11 -->
+    - [x] Push to GitHub (https://github.com/adorable-fox/chemical-kittens) <!-- id: 38 -->
+    - [x] Refine Header Layout (Dropdown Alignment) <!-- id: 40 -->
+    - [x] Fix Dropdown Truncation ("Ingredient") <!-- id: 41 -->
+- [x] Deployment
+    - [x] Deploy to Cloudflare Pages <!-- id: 39 -->
