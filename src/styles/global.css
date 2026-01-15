@@ -280,7 +280,7 @@ article h3 {
 .search-container {
   position: relative;
   width: 100%;
-  max-width: 450px;
+  /* max-width controlled by parent now */
   box-sizing: border-box;
 }
 
@@ -300,9 +300,10 @@ article h3 {
 .filters {
   display: flex;
   gap: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 0;
+  /* Handled by parent gap */
   width: 100%;
-  max-width: 450px;
+  /* max-width controlled by parent now */
   box-sizing: border-box;
 }
 
