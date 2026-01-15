@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  
+  const allTags = new Set();
+  
+  recipes.forEach(recipe => {
+    if (recipe.data.recipeType) allTags.add({ name: recipe.data.recipeType, type: 'type' });
+    if (recipe.data.mainIngredient) allTags.add({ name: recipe.data.mainIngredient, type: 'ingredient' });
+    if (recipe.data.country) allTags.add({ name: recipe.data.country, type: 'country' });
+  });
+
+  // Convert Set of objects to array and deduplicate by name
+  const uniqueTags = Array.from(allTags).reduce((acc, current) => {
+    const x = acc.find(item => item.name === current.name);
+    if (!x) {
+      return acc.concat([current]);
+    } else {
+      return acc;
+    }
+  }, []);
+
+  return uniqueTags.map(tag => {
+    const slug = tag.name.toLowerCase().replace(/ /g, '-');
+    const filteredRecipes = recipes.filter(recipe => 
+        recipe.data.recipeType === tag.name || 
+        recipe.data.mainIngredient === tag.name || 
+        recipe.data.country === tag.name
+    );
+    
+    // Sort Alphabetically
+    filteredRecipes.sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+    return {
+      params: { tag: slug },
+      props: { tag: tag.name, recipes: filteredRecipes },
+    };
+  });
+}
+
+const { tag, recipes } = Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<Layout title={`Recipes tagged: ${tag}`}>
+    <div class="header-section" style="text-align: center; margin-bottom: 3rem;">
+        <a href="/">&larr; Back to All Recipes</a>
+        <h1>Recipes tagged with <span class="highlight">"{tag}"</span></h1>
+    </div>
+
+	<div class="recipe-grid">
+		{recipes.map((recipe) => (
+			<div class="recipe-card">
+                <a href={`/recipes/${recipe.slug}`} class="recipe-card-link" style="text-decoration: none; color: inherit; display: block;">
+                    {recipe.data.image && <Image src={recipe.data.image} alt={recipe.data.title} class="card-image" />}
+                    <div class="card-content">
+                        <h2>{recipe.data.title}</h2>
+                    </div>
+                </a>
+                <div class="tags" style="padding: 0 1.5rem 1.5rem; margin-top: -1rem;">
+                    {recipe.data.recipeType && <a href={`/tags/${recipe.data.recipeType.toLowerCase().replace(/ /g, '-')}`} class="tag tag-type">{recipe.data.recipeType}</a>}
+                    {recipe.data.mainIngredient && <a href={`/tags/${recipe.data.mainIngredient.toLowerCase().replace(/ /g, '-')}`} class="tag tag-ingredient">{recipe.data.mainIngredient}</a>}
+                    {recipe.data.country && <a href={`/tags/${recipe.data.country.toLowerCase().replace(/ /g, '-')}`} class="tag tag-country">{recipe.data.country}</a>}
+                </div>
+			</div>
+		))}
+	</div>
+</Layout>
+
+<style>
+    .highlight {
+        color: var(--accent-color);
+    }
+    .header-section a {
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: #666;
+        font-size: 0.9rem;
+    }
+    .header-section a:hover {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+</style>

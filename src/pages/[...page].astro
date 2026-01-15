@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths({ paginate }) {
+  const recipes = await getCollection('recipes');
+  // Sort by Title Alphabetically
+  recipes.sort((a, b) => {
+    return a.data.title.localeCompare(b.data.title);
+  });
+  
+  // Return a paginated collection of paths for all recipes
+  return paginate(recipes, { pageSize: 9 });
+}
+
+const { page } = Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<Layout title={page.currentPage === 1 ? "🍳 Cookbook" : `🍳 Cookbook | Page ${page.currentPage}`}>
+	<div class="recipe-grid">
+		{page.data.map((recipe) => (
+			<div class="recipe-card">
+                <a href={`/recipes/${recipe.slug}`} class="recipe-card-link" style="text-decoration: none; color: inherit; display: block;">
+                    {recipe.data.image && <Image src={recipe.data.image} alt={recipe.data.title} class="card-image" />}
+                    <div class="card-content">
+                        <h2>{recipe.data.title}</h2>
+                    </div>
+                </a>
+                <div class="tags" style="padding: 0 1.5rem 1.5rem; margin-top: -1rem;">
+                    {recipe.data.recipeType && <a href={`/tags/${recipe.data.recipeType.toLowerCase().replace(/ /g, '-')}`} class="tag tag-type">{recipe.data.recipeType}</a>}
+                    {recipe.data.mainIngredient && <a href={`/tags/${recipe.data.mainIngredient.toLowerCase().replace(/ /g, '-')}`} class="tag tag-ingredient">{recipe.data.mainIngredient}</a>}
+                    {recipe.data.country && <a href={`/tags/${recipe.data.country.toLowerCase().replace(/ /g, '-')}`} class="tag tag-country">{recipe.data.country}</a>}
+                </div>
+			</div>
+		))}
+	</div>
+
+    <div class="pagination">
+        {page.url.prev ? <a href={page.url.prev} class="btn-nav">← Previous</a> : <span class="disabled">← Previous</span>}
+        <span class="page-count">Page {page.currentPage} of {page.lastPage}</span>
+        {page.url.next ? <a href={page.url.next} class="btn-nav">Next →</a> : <span class="disabled">Next →</span>}
+    </div>
+</Layout>
+
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #eee;
+    }
+    
+    .btn-nav {
+        background: var(--text-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: opacity 0.2s;
+    }
+    
+    .btn-nav:hover {
+        opacity: 0.8;
+        text-decoration: none;
+    }
+
+    .disabled {
+        color: #ccc;
+        cursor: not-allowed;
+    }
+</style>

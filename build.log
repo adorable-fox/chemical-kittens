@@ -1,0 +1,83 @@
+
+> chemical-kittens@0.0.1 build
+> astro build
+
+14:17:42 [content] Syncing content
+14:17:42 [content] Synced content
+14:17:42 [types] Generated 565ms
+14:17:42 [build] output: "static"
+14:17:42 [build] mode: "static"
+14:17:42 [build] directory: /home/jakub/Documents/chemical-kittens/dist/
+14:17:42 [build] Collecting build info...
+14:17:42 [build] ✓ Completed in 599ms.
+14:17:42 [build] Building static entrypoints...
+14:17:44 [vite] ✓ built in 1.47s
+14:17:44 [build] ✓ Completed in 1.55s.
+
+ building client (vite) 
+14:17:44 [vite] transforming...
+14:17:44 [vite] ✓ 2 modules transformed.
+14:17:44 [vite] rendering chunks...
+14:17:44 [vite] ✓ built in 21ms
+
+ generating static routes 
+14:17:44 ▶ src/pages/recipes/[...slug].astro
+14:17:44   ├─ /recipes/0003_ragu_alla_bolognese/index.html (+36ms) 
+14:17:44   ├─ /recipes/0001_taco_seasoning/index.html (+8ms) 
+14:17:44   ├─ /recipes/0004_sweet_and_sour_tofu/index.html (+8ms) 
+14:17:44   ├─ /recipes/0002_ranch_mayo/index.html (+7ms) 
+14:17:44   ├─ /recipes/0006_lamb_keema_curry/index.html (+7ms) 
+14:17:44   ├─ /recipes/0005_dal_fry/index.html (+4ms) 
+14:17:44   ├─ /recipes/0007_mongolian_beef/index.html (+8ms) 
+14:17:44   ├─ /recipes/0008_austrian_meatloaf/index.html (+4ms) 
+14:17:44   ├─ /recipes/0009_chickpea_curry/index.html (+8ms) 
+14:17:44   ├─ /recipes/0010_fajita_seasoning/index.html (+6ms) 
+14:17:44   ├─ /recipes/0011_enchilada_sauce/index.html (+5ms) 
+14:17:44   ├─ /recipes/0015_salsa/index.html (+4ms) 
+14:17:44   ├─ /recipes/0016_stir_fry_sauce/index.html (+4ms) 
+14:17:44   ├─ /recipes/0012_dry_rub/index.html (+4ms) 
+14:17:44   ├─ /recipes/0014_blackened_seasoning/index.html (+4ms) 
+14:17:44   └─ /recipes/0013_italian_seasoning/index.html (+4ms) 
+14:17:44 λ src/pages/search.json.ts
+14:17:44   └─ /search.json (+2ms) 
+14:17:44 ▶ src/pages/tags/[tag].astro
+14:17:44   ├─ /tags/mains/index.html (+4ms) 
+14:17:44   ├─ /tags/beef/index.html (+2ms) 
+14:17:44   ├─ /tags/italy/index.html (+4ms) 
+14:17:44   ├─ /tags/spices/index.html (+2ms) 
+14:17:44   ├─ /tags/vegetarian/index.html (+3ms) 
+14:17:44   ├─ /tags/mexico/index.html (+2ms) 
+14:17:44   ├─ /tags/china/index.html (+2ms) 
+14:17:44   ├─ /tags/sauces/index.html (+2ms) 
+14:17:44   ├─ /tags/usa/index.html (+2ms) 
+14:17:44   ├─ /tags/lamb/index.html (+2ms) 
+14:17:44   ├─ /tags/india/index.html (+2ms) 
+14:17:44   ├─ /tags/beef-&-pork/index.html (+2ms) 
+14:17:44   ├─ /tags/austria/index.html (+2ms) 
+14:17:44   └─ /tags/thailand/index.html (+2ms) 
+14:17:44 ▶ src/pages/[...page].astro
+14:17:44   ├─ /index.html (+4ms) 
+14:17:44   └─ /2/index.html (+7ms) 
+14:17:44 ✓ Completed in 207ms.
+
+ generating optimized images 
+14:17:44   ▶ /_astro/0006_lamb_keema_curry.duJ2Ozo7_Z1Sd7mU.webp (reused cache entry) (+1ms) (1/16)
+14:17:44   ▶ /_astro/0001_taco_seasoning.DmHiQ9Ha_ZEk7dE.webp (reused cache entry) (+2ms) (2/16)
+14:17:44   ▶ /_astro/0002_ranch_mayo.UOwgL-jG_ZLQW7C.webp (reused cache entry) (+2ms) (3/16)
+14:17:44   ▶ /_astro/0003_ragu_alla_bolognese.B3c2jpmX_Zd05jv.webp (reused cache entry) (+2ms) (4/16)
+14:17:44   ▶ /_astro/0005_dal_fry.BCxbQQah_YFq8M.webp (reused cache entry) (+2ms) (5/16)
+14:17:44   ▶ /_astro/0008_austrian_meatloaf.fAZeV1dY_1gVkey.webp (reused cache entry) (+2ms) (6/16)
+14:17:44   ▶ /_astro/0009_chickpea_curry.Cw4bldQl_NNy6r.webp (reused cache entry) (+2ms) (7/16)
+14:17:44   ▶ /_astro/0004_sweet_and_sour_tofu.DzDe8a71_ZJr6ma.webp (reused cache entry) (+3ms) (8/16)
+14:17:44   ▶ /_astro/0007_mongolian_beef.Cf7GDYjg_Z2elrSu.webp (reused cache entry) (+3ms) (9/16)
+14:17:44   ▶ /_astro/0011_enchilada_sauce.CGLqj9GN_20vz16.webp (reused cache entry) (+3ms) (10/16)
+14:17:44   ▶ /_astro/0015_salsa.C8nn5mN9_1Mn2kD.webp (reused cache entry) (+3ms) (11/16)
+14:17:44   ▶ /_astro/0016_stir_fry_sauce.pKZsANjn_1NQ8Pu.webp (reused cache entry) (+3ms) (12/16)
+14:17:44   ▶ /_astro/0013_italian_seasoning.CiO0-EYv_auj1p.webp (reused cache entry) (+3ms) (13/16)
+14:17:44   ▶ /_astro/0010_fajita_seasoning.DbnlmIm1_1I9KUn.webp (reused cache entry) (+3ms) (14/16)
+14:17:44   ▶ /_astro/0012_dry_rub.Ckx60wCj_DONed.webp (reused cache entry) (+3ms) (15/16)
+14:17:44   ▶ /_astro/0014_blackened_seasoning.xJGobL6r_ZakwxS.webp (reused cache entry) (+3ms) (16/16)
+14:17:44 ✓ Completed in 5ms.
+
+14:17:44 [build] 32 page(s) built in 2.42s
+14:17:44 [build] Complete!

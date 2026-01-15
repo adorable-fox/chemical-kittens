@@ -1,0 +1,97 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+import { Image } from 'astro:assets';
+---
+
+<Layout title={`🍳 ${entry.data.title}`}>
+  <article>
+    <div class="recipe-header">
+      <a href="/">&larr; Back to Recipes</a>
+      <h1>{entry.data.title}</h1>
+      {entry.data.image && <Image src={entry.data.image} alt={entry.data.title} class="detail-image" />}
+      <div class="tags" style="justify-content: center; margin-top: 0.5rem; margin-bottom: 2rem;">
+        {entry.data.recipeType && <a href={`/tags/${entry.data.recipeType.toLowerCase().replace(/ /g, '-')}`} class="tag tag-type">{entry.data.recipeType}</a>}
+        {entry.data.mainIngredient && <a href={`/tags/${entry.data.mainIngredient.toLowerCase().replace(/ /g, '-')}`} class="tag tag-ingredient">{entry.data.mainIngredient}</a>}
+        {entry.data.country && <a href={`/tags/${entry.data.country.toLowerCase().replace(/ /g, '-')}`} class="tag tag-country">{entry.data.country}</a>}
+      </div>
+      <p class="recipe-meta">
+        {Array.isArray(entry.data.ingredients) 
+            ? entry.data.ingredients.length 
+            : Object.values(entry.data.ingredients).reduce((acc, val) => acc + val.length, 0)
+        } ingredients
+        <button onclick="window.print()" class="print-btn" style="margin-left: 1rem;">🖨️ Print Recipe</button>
+      </p>
+    </div>
+
+    <div class="ingredients-section">
+      <h2 style="margin-top: 0;">Ingredients</h2>
+      {Array.isArray(entry.data.ingredients) ? (
+        <ul class="ingredients-list">
+          {entry.data.ingredients.map((ingredient, index) => (
+            <li>
+                <label class="ingredient-label">
+                    <input type="checkbox" class="ingredient-check" data-slug={entry.slug} data-group="main" data-index={index} />
+                    <span>{ingredient}</span>
+                </label>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="ingredient-groups">
+            {Object.entries(entry.data.ingredients).map(([group, items]) => (
+                <div class="group">
+                    <h3 style="margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.1rem; color: #444;">{group}</h3>
+                    <ul class="ingredients-list">
+                        {items.map((ingredient, index) => (
+                            <li>
+                                <label class="ingredient-label">
+                                    <input type="checkbox" class="ingredient-check" data-slug={entry.slug} data-group={group} data-index={index} />
+                                    <span>{ingredient}</span>
+                                </label>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+      )}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // ... (existing checklist code) ...
+            const checkboxes = document.querySelectorAll('.ingredient-check');
+            checkboxes.forEach(box => { /* ... existing logic ... */
+                const slug = box.dataset.slug;
+                const group = box.dataset.group;
+                const index = box.dataset.index;
+                const storageKey = `recipe-${slug}-${group}-${index}`;
+                if (localStorage.getItem(storageKey) === 'true') {
+                    box.checked = true;
+                    box.closest('label').classList.add('checked');
+                }
+                box.addEventListener('change', (e) => {
+                    localStorage.setItem(storageKey, e.target.checked);
+                    if (e.target.checked) box.closest('label').classList.add('checked');
+                    else box.closest('label').classList.remove('checked');
+                });
+            });
+        });
+    </script>
+
+    <div class="instructions-section">
+      <Content />
+    </div>
+  </article>
+</Layout>
