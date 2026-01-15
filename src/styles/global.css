@@ -47,6 +47,33 @@ header {
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header-left {
+    text-align: center;
+  }
+
+  .header-right {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .search-and-filters {
+    width: 100%;
+  }
+
+  /* When stacked, we need the toggle and search to still be aligned */
+  .header-right {
+    justify-content: center;
+  }
 }
 
 .header-left {
@@ -252,7 +279,8 @@ article h3 {
 /* Search Styles */
 .search-container {
   position: relative;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   box-sizing: border-box;
 }
 
@@ -273,7 +301,8 @@ article h3 {
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   box-sizing: border-box;
 }
 
