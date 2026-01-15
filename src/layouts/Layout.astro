@@ -27,14 +27,14 @@ const allRecipes = await getCollection('recipes');
 				    <p class="subtitle">Most recipes nicked from somewhere and adjusted to our liking</p>
                 </div>
                 <div class="header-right" style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
-                    <div class="header-top-row" style="display: flex; gap: 1rem; align-items: center; width: 100%; max-width: 500px;">
+                    <div class="header-top-row" style="display: flex; gap: 1rem; align-items: center; width: 100%; max-width: 600px;">
                         <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
                         <div class="search-container" style="flex: 1;">
                             <input type="text" id="search-input" placeholder="Search recipes..." autocomplete="off">
                             <div id="search-results" class="search-results"></div>
                         </div>
                     </div>
-                    <div class="filters" style="width: 100%; max-width: 500px;">
+                    <div class="filters" style="width: 100%; max-width: 600px;">
                         <select class="filter-select" id="filter-type">
                             <option value="">Type</option>
                             {Array.from(new Set(allRecipes.map(r => r.data.recipeType).filter(Boolean))).sort().map(t => (
