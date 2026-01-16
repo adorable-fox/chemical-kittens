@@ -1,19 +1,19 @@
 ---
 title: "Dry rub"
-description: ""
+description: "A sweet and savory all-purpose BBQ rub, perfect for ribs, pulled pork, or chicken."
 publishDate: 2025-08-07
 image: "../../assets/images/0012_dry_rub.jpg"
 ingredients:
-    - "White sugar: 3 tbsp"
-    - "Dark brown sugar: 2 tbsp"
-    - "Smoked paprika: 1 tbsp"
-    - "Salt: 1 1/2 tbsp"
-    - "Cumin powder: 1 tbsp"
-    - "Black pepper powder: 1 tbsp"
-    - "Onion powder: 1 tbsp"
-    - "Garlic powder: 1 tbsp"
-    - "Chili powder: 2 tsp"
-    - "Cayenne pepper powder: 1/2 tsp"
+    - "3 tbsp White sugar"
+    - "2 tbsp Dark brown sugar"
+    - "1 tbsp Smoked paprika"
+    - "1 1/2 tbsp Salt"
+    - "1 tbsp Cumin powder"
+    - "1 tbsp Black pepper powder"
+    - "1 tbsp Onion powder"
+    - "1 tbsp Garlic powder"
+    - "2 tsp Chili powder"
+    - "1/2 tsp Cayenne pepper powder"
 recipeType: "Spices"
 mainIngredient: "Vegetarian"
 country: "USA"
@@ -21,4 +21,8 @@ country: "USA"
 
 # Instructions
 
-Mix all the ingredients thoroughly.
+1.  **Combine**
+    Add all the ingredients to a small bowl or jar.
+
+2.  **Mix**
+    Mix thoroughly. Use a whisk or a fork to break up any hard clumps of brown sugar to ensure the mixture is fine and even.

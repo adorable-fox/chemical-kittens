@@ -1,25 +1,25 @@
 ---
 title: "Lamb keema curry"
-description: ""
+description: "A rich and spicy minced lamb curry with peas, perfect for serving with rice or roti."
 publishDate: 2024-11-30
 image: "../../assets/images/0006_lamb_keema_curry.jpg"
 ingredients:
   Main:
-    - "Onions, sliced: 2"
-    - "Garlic cloves, minced: 4"
-    - "Ginger paste: 1 tsp"
-    - "Tomatoes, chopped: 2"
-    - "Tomato paste: 2 tbsp"
-    - "Lamb mince: 500g"
+    - "2 Onions, sliced"
+    - "4 Garlic cloves, minced"
+    - "1 tsp Ginger paste"
+    - "2 Tomatoes, chopped"
+    - "2 tbsp Tomato paste"
+    - "500g Lamb mince"
     - "Frozen peas"
-    - "Coriander, chopped"
-  Ranch spice mix:
-    - "Chilli powder: 1 tsp"
-    - "Turmeric powder: 1/4 tsp"
-    - "Cumin powder: 1 tsp"
-    - "Coriander powder: 2 tsp"
-    - "Garam masala: 1/2 tsp"
-    - "Salt: 1 tsp"
+    - "Chopped coriander"
+  Spices:
+    - "1 tsp Chilli powder"
+    - "1/4 tsp Turmeric powder"
+    - "1 tsp Cumin powder"
+    - "2 tsp Coriander powder"
+    - "1/2 tsp Garam masala"
+    - "1 tsp Salt"
 recipeType: "Mains"
 mainIngredient: "Lamb"
 country: "India"
@@ -27,4 +27,29 @@ country: "India"
 
 # Instructions
 
-Fry onions in oil until brown. Lower the temperature, add minced ginger and garlic; fry for a few minutes. Stir in the tomatoes and turn the temperature up. Add 60 ml water and the spice mix. Stir well and fry for a few minutes. Add the tomato puree and cook for 5 minutes. Add the lamb mince, and brown the meat. Add 60 ml water, cover and cook for 40 minutes on low heat. Add frozen peas and cook for 10 minutes. Garnish with fresh coriander and serve with rice.
+1.  **Brown Onions**
+    Fry onions in oil until brown.
+
+2.  **Sauté Aromatics**
+    Lower the temperature, add minced ginger and garlic; fry for a few minutes.
+
+3.  **Add Tomatoes**
+    Stir in the chopped tomatoes and turn the temperature up.
+
+4.  **Bloom Spices**
+    Add 60 ml water and the spice mix. Stir well and fry for a few minutes.
+
+5.  **Cook Paste**
+    Add the tomato puree and cook for 5 minutes to cook out the raw flavor.
+
+6.  **Brown Meat**
+    Add the lamb mince to the pan and fry until the meat is browned.
+
+7.  **Simmer**
+    Add another 60 ml of water, cover the pan, and cook for 40 minutes on low heat.
+
+8.  **Add Peas**
+    Add the frozen peas and cook for 10 minutes.
+
+9.  **Serve**
+    Garnish with fresh coriander and serve with rice.

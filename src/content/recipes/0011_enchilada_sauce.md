@@ -1,19 +1,19 @@
 ---
 title: "Enchilada sauce"
-description: ""
+description: "A quick and rich homemade red enchilada sauce made from pantry staples, perfect for beef, chicken, or cheese enchiladas."
 publishDate: 2025-03-29
 image: "../../assets/images/0011_enchilada_sauce.jpg"
 ingredients:
-    - "Olive oil: 3 tbsp"
-    - "Flour: 3 tbsp"
-    - "Chili powder: 1 tsp"
-    - "Cumin powder: 1 tsp"
-    - "Garlic powder: 1/2 tsp"
-    - "Oregano: 1/4 tsp"
-    - "Salt: 1/4 tsp"
-    - "Tomato paste: 2 tbsp"
-    - "Broth: 500 ml"
-    - "Apple cider vinegar: 1 tsp"
+    - "3 tbsp Olive oil"
+    - "3 tbsp Flour"
+    - "1 tsp Chili powder"
+    - "1 tsp Cumin powder"
+    - "1/2 tsp Garlic powder"
+    - "1/4 tsp Oregano"
+    - "1/4 tsp Salt"
+    - "2 tbsp Tomato paste"
+    - "500 ml Broth"
+    - "1 tsp Apple cider vinegar"
     - "Pinch of cinnamon"
 recipeType: "Sauces"
 mainIngredient: "Vegetarian"
@@ -22,6 +22,17 @@ country: "Mexico"
 
 # Instructions
 
-Mix the spices with salt and flour thoroughly.
+1.  **Mix Dry Ingredients**
+    Mix the spices (chili powder, cumin, garlic powder, oregano, cinnamon) with the salt and flour thoroughly in a small bowl.
 
-Heat the oil in a medium-sized pan over medium heat. Add the flour and spice mixture. Whisk constantly and cook until slightly darkened; about 1 minute. Add the tomato paste and cook for another minute. Add the broth in small portions, whisk to remove any lumps. Bring the mixture to a simmer and cook for 5 to 7 minutes, until the sauce thickened a bit. Remove from the heat and add the vinegar.
+2.  **Make Roux**
+    Heat the oil in a medium-sized pan over medium heat. Add the flour and spice mixture. Whisk constantly and cook until fragrant and slightly darkened; about 1 minute.
+
+3.  **Cook Tomato Paste**
+    Add the tomato paste and cook for another minute, whisking to combine.
+
+4.  **Simmer**
+    Add the broth in small portions, whisking constantly to remove any lumps. Bring the mixture to a simmer and cook for 5 to 7 minutes, until the sauce has thickened slightly.
+
+5.  **Finish**
+    Remove from the heat and stir in the apple cider vinegar.
