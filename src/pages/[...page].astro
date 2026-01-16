@@ -21,7 +21,7 @@ import { Image } from 'astro:assets';
 	<div class="recipe-grid">
 		{page.data.map((recipe) => (
 			<div class="recipe-card">
-                <a href={`/recipes/${recipe.slug}`} class="recipe-card-link" style="text-decoration: none; color: inherit; display: block;">
+                <a href={`/recipes/${recipe.slug}?page=${page.currentPage}`} class="recipe-card-link" style="text-decoration: none; color: inherit; display: block;">
                     {recipe.data.image && <Image src={recipe.data.image} alt={recipe.data.title} class="card-image" />}
                     <div class="card-content">
                         <h2>{recipe.data.title}</h2>

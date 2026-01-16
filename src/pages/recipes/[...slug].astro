@@ -17,7 +17,7 @@ import { Image } from 'astro:assets';
 <Layout title={`🍳 ${entry.data.title}`}>
   <article>
     <div class="recipe-header">
-      <a href="/">&larr; Back to Recipes</a>
+      <a href="/" class="back-link">&larr; Back to Recipes</a>
       <h1>{entry.data.title}</h1>
       {entry.data.image && <Image src={entry.data.image} alt={entry.data.title} class="detail-image" />}
       <div class="tags" style="justify-content: center; margin-top: 0.5rem; margin-bottom: 2rem;">
@@ -88,6 +88,17 @@ import { Image } from 'astro:assets';
                 });
             });
         });
+    </script>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const page = urlParams.get('page');
+      if (page && parseInt(page) > 1) {
+        const backLink = document.querySelector('.back-link');
+        if (backLink) {
+          backLink.href = `/${page}`;
+        }
+      }
     </script>
 
     <div class="instructions-section">
