@@ -11,7 +11,7 @@ ingredients:
     - "1/2 tsp Chilli flakes"
     - "50ml Vodka"
     - "60ml Double cream"
-    - "60g Parmesan"
+    - "40g Parmesan"
     - "2 tbsp Butter"
     - "Fresh basil"
     - "Salt"
