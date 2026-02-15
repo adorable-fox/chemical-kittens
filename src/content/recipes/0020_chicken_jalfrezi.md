@@ -1,5 +1,5 @@
 ---
-title: "Chicken Jalfrezi"
+title: "Chicken jalfrezi"
 description: "A restaurant-style stir-fry curry featuring tender chicken, peppers, and onions in a spicy, thick tomato masala."
 publishDate: 2026-02-15
 image: "../../assets/images/0020_chicken_jalfrezi.jpg"
