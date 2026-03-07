@@ -11,7 +11,6 @@ ingredients:
     - "1 tsp Salt"
     - "1/2 tsp White pepper"
   Filling:
-    - "3 tbsp Butter or cooking oil"
     - "450g Mushrooms, chopped"
     - "2 Onions, chopped"
     - "Salt and black pepper to taste"
